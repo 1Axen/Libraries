@@ -34,6 +34,8 @@ function Settings.new(Name)
         if Success then
             Items = HttpService:JSONDecode(Content)
         end
+
+        return Success
     end
 
     return Object
