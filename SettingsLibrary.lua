@@ -19,7 +19,7 @@ function Settings.new(Name)
     
 
     function Object.Add(Directory, Values)
-        Object._items[Directory] = Values
+        Items[Directory] = Values
     end
 
     function Object.Save()
