@@ -2,6 +2,8 @@ local Settings = {}
 local HttpService = game:GetService("HttpService")
 
 function Settings.new(Name)
+    Name = if Name then Name .. ".txt" else "save_file.txt"
+
     local Items = {}
     local Object = setmetatable({}, {
         __iter = function(self)
@@ -16,7 +18,6 @@ function Settings.new(Name)
             Items[key] = value 
         end
     })
-    
 
     function Object.Add(Directory, Values)
         Items[Directory] = Values
